@@ -1,5 +1,5 @@
 const botPresence = new Presence({
-  clientId: "819122551435296818"
+  clientId: "797117931577147403"
 }),
   botBrowsing = Math.floor(Date.now() / 1000);
 
@@ -12,7 +12,7 @@ botPresence.on("UpdateData", async () => {
 
   botData.startTimestamp = botBrowsing;
 
-  if (botHost == "discord-botlist.eu") {
+  if (botHost == "ultron-botlist.de") {
     if (botPage == "/") {
       botData.details = "Browsing";
     } else if (botPage == "/search") {
@@ -25,19 +25,8 @@ botPresence.on("UpdateData", async () => {
           "url": document.URL
         }
       ];
-    } else if (botPage == "/bots/tag") {
-      const urlParams: URLSearchParams = new URLSearchParams(window.location.search),
-        myParam: string = urlParams.get('tag');
-      botData.details = "Searching Tag:";
-      botData.state = myParam;
-      botData.buttons = [
-        {
-          "label": "View Tag",
-          "url": document.URL
-        }
-      ];
-    } else if (botPage == "/login_err/") {
-      botData.details = "Login In Page";
+    } else if (botPage == "/login") {
+      botData.details = "Logging in...";
     } else if (botPage.includes("/users/")) {
       const username: string = document.querySelector("#Username").textContent;
       botData.details = "Viewing Profile:";
@@ -49,9 +38,9 @@ botPresence.on("UpdateData", async () => {
         }
       ];
     } else if (botPage.includes("/bots/")) {
-      if (botPage.includes("/vote")) {
+      if (botPage.includes("/like")) {
         const voteBotName: string = document.querySelector("#vote1 > h1").textContent.replace("Vote for ", "");
-        botData.details = "Voting for:";
+        botData.details = "Liking:";
         botData.state = voteBotName;
         botData.buttons = [
           {
