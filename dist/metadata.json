@@ -1,9 +1,9 @@
 {
     "$schema": "https://schemas.premid.app/metadata/1.3",
-    "service": "Discord BotList",
+    "service": "Ultron-Botlist",
     "author": {
-      "name": "OGMatrix",
-      "id": "657290880947978241"
+      "name": "SpielenmitLili",
+      "id": "678244990484480011"
     },
     "category": "other",
     "logo": "https://i.imgur.com/V8TuIHR.jpg",
@@ -14,11 +14,12 @@
       "discord",
       "botlist",
       "list",
-      "discord-botlist"
+      "discord-botlist",
+      "ultron-botlist"
     ],
     "url": [
-      "docs.discord-botlist.eu",
-      "discord-botlist.eu"
+      "https://api.ultron-botlist.de",
+      "https://ultron-botlist.de"
     ],
     "description": {
       "en": "discord-botlist.eu - your Discord Bot List! We give you the availability to apply your bot and give your bot a page on our website.",
